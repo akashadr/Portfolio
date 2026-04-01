@@ -91,7 +91,7 @@ function Job({ job, delay, isLast }) {
       )}
 
       <div className="bg-[#111118] border border-[#1e1e2e] rounded-2xl p-6 mb-8 glow-card">
-        <div className="flex flex-wrap items-start justify-between gap-3 mb-4">
+        <div className="flex flex-col sm:flex-row sm:flex-wrap sm:items-start sm:justify-between gap-2 mb-4">
           <div>
             <h3 className="text-slate-100 font-bold text-xl">{job.role}</h3>
             <div className="flex items-center gap-2 mt-1">
@@ -109,9 +109,9 @@ function Job({ job, delay, isLast }) {
 
         <ul className="space-y-2">
           {job.highlights.map((h, i) => (
-            <li key={i} className="flex gap-3 text-slate-400 text-sm leading-relaxed">
+            <li key={i} className="flex gap-2 text-slate-400 text-sm leading-relaxed min-w-0">
               <span className="text-purple-400 mt-1 shrink-0">▸</span>
-              {h}
+              <span className="min-w-0 break-words">{h}</span>
             </li>
           ))}
         </ul>

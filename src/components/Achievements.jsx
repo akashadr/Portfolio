@@ -30,15 +30,15 @@ function StatCard({ stat, delay }) {
   return (
     <div
       ref={ref}
-      className={`rounded-2xl p-6 bg-gradient-to-br ${stat.bg} border border-white/5 text-center glow-card`}
+      className={`rounded-2xl p-4 bg-gradient-to-br ${stat.bg} border border-white/5 text-center glow-card`}
       style={{
         opacity: inView ? 1 : 0,
         transform: inView ? 'none' : 'scale(0.9)',
         transition: `opacity 0.55s ease ${delay}s, transform 0.55s ease ${delay}s`,
       }}
     >
-      <div className={`text-4xl font-extrabold ${stat.color} mb-1`}>{stat.value}</div>
-      <div className="text-slate-400 text-sm font-medium">{stat.label}</div>
+      <div className={`text-3xl font-extrabold ${stat.color} mb-1`}>{stat.value}</div>
+      <div className="text-slate-400 text-xs font-medium leading-tight">{stat.label}</div>
     </div>
   );
 }

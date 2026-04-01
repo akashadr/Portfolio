@@ -147,7 +147,7 @@ export default function Hero() {
 
         {/* CTA */}
         <div
-          className="flex items-center justify-center gap-4 flex-wrap"
+          className="flex flex-col sm:flex-row items-center justify-center gap-3 w-full sm:w-auto"
           style={{
             opacity: inView ? 1 : 0,
             transform: inView ? 'none' : 'translateY(20px)',
@@ -156,13 +156,13 @@ export default function Hero() {
         >
           <a
             href="#experience"
-            className="px-7 py-3 bg-purple-600 hover:bg-purple-500 text-white font-semibold rounded-xl transition-all duration-250 hover:scale-105 hover:shadow-xl hover:shadow-purple-500/30"
+            className="w-full sm:w-auto text-center px-7 py-3 bg-purple-600 hover:bg-purple-500 text-white font-semibold rounded-xl transition-all duration-250 hover:scale-105 hover:shadow-xl hover:shadow-purple-500/30"
           >
             View My Work
           </a>
           <a
             href="#contact"
-            className="px-7 py-3 border border-purple-500/50 text-purple-300 hover:bg-purple-500/10 hover:border-purple-400 font-semibold rounded-xl transition-all duration-250 hover:scale-105"
+            className="w-full sm:w-auto text-center px-7 py-3 border border-purple-500/50 text-purple-300 hover:bg-purple-500/10 hover:border-purple-400 font-semibold rounded-xl transition-all duration-250 hover:scale-105"
           >
             Get in Touch
           </a>
@@ -170,7 +170,7 @@ export default function Hero() {
             href="https://docs.google.com/document/d/1ZoY1LjoIoRv8EpqMY6EmXy8_8vlMH5YvsoAnqNVq69A/edit?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2 px-7 py-3 border border-slate-700 text-slate-300 hover:bg-slate-800 hover:border-slate-500 font-semibold rounded-xl transition-all duration-250 hover:scale-105"
+            className="w-full sm:w-auto justify-center flex items-center gap-2 px-7 py-3 border border-slate-700 text-slate-300 hover:bg-slate-800 hover:border-slate-500 font-semibold rounded-xl transition-all duration-250 hover:scale-105"
           >
             <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />

@@ -84,9 +84,9 @@ function ProjectCard({ project, delay }) {
 
         <ul className="space-y-1.5 mb-6">
           {project.highlights.map((h, i) => (
-            <li key={i} className="flex gap-2 text-slate-400 text-sm">
+            <li key={i} className="flex gap-2 text-slate-400 text-sm min-w-0">
               <span className="text-purple-400 shrink-0">▸</span>
-              {h}
+              <span className="min-w-0 break-words">{h}</span>
             </li>
           ))}
         </ul>

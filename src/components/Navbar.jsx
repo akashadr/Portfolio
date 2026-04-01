@@ -86,6 +86,14 @@ export default function Navbar() {
             </a>
           ))}
           <a
+            href="https://docs.google.com/document/d/1ZoY1LjoIoRv8EpqMY6EmXy8_8vlMH5YvsoAnqNVq69A/edit?usp=sharing"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-4 py-2 border border-slate-700 text-slate-300 text-sm font-semibold rounded-lg text-center"
+          >
+            Resume
+          </a>
+          <a
             href="mailto:akashjha2671@gmail.com"
             className="px-4 py-2 bg-purple-600 text-white text-sm font-semibold rounded-lg text-center"
           >
