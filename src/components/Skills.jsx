@@ -50,7 +50,7 @@ function CategoryCard({ cat, delay }) {
   return (
     <div
       ref={ref}
-      className="bg-[#111118] border border-[#1e1e2e] rounded-2xl p-6 glow-card"
+      className="bg-[var(--bg-card)] border border-[var(--border-card)] rounded-2xl p-6 glow-card"
       style={{
         opacity: inView ? 1 : 0,
         transform: inView ? 'none' : 'translateY(24px)',
@@ -81,7 +81,7 @@ export default function Skills() {
   const [titleRef, titleInView] = useInView();
 
   return (
-    <section id="skills" className="py-24 bg-[#09090f] relative">
+    <section id="skills" className="py-24 bg-[var(--bg-1)] relative">
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-purple-900/5 to-transparent pointer-events-none" />
       <div className="max-w-6xl mx-auto px-6">
 

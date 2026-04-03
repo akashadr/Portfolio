@@ -81,7 +81,7 @@ function Job({ job, delay, isLast }) {
       }}
     >
       {/* Timeline dot */}
-      <div className={`absolute left-0 top-1.5 w-5 h-5 rounded-full ${job.dot} ring-4 ring-[#09090f] z-10 flex items-center justify-center`}>
+      <div className={`absolute left-0 top-1.5 w-5 h-5 rounded-full ${job.dot} ring-4 ring-[var(--bg-1)] z-10 flex items-center justify-center`}>
         <div className="w-2 h-2 rounded-full bg-white/80" />
       </div>
 
@@ -90,7 +90,7 @@ function Job({ job, delay, isLast }) {
         <div className="absolute left-2.5 top-6 bottom-0 w-px bg-gradient-to-b from-slate-700 to-transparent" style={{ transform: 'translateX(-0.5px)' }} />
       )}
 
-      <div className="bg-[#111118] border border-[#1e1e2e] rounded-2xl p-6 mb-8 glow-card">
+      <div className="bg-[var(--bg-card)] border border-[var(--border-card)] rounded-2xl p-6 mb-8 glow-card">
         <div className="flex flex-col sm:flex-row sm:flex-wrap sm:items-start sm:justify-between gap-2 mb-4">
           <div>
             <h3 className="text-slate-100 font-bold text-xl">{job.role}</h3>
@@ -102,7 +102,7 @@ function Job({ job, delay, isLast }) {
               <span className="text-xs text-slate-500 bg-slate-800 px-2 py-0.5 rounded-full">{job.type}</span>
             </div>
           </div>
-          <span className="text-sm text-slate-400 bg-[#1a1a24] px-3 py-1 rounded-full border border-[#2e2e3a] font-mono whitespace-nowrap">
+          <span className="text-sm text-slate-400 bg-[var(--bg-tag)] px-3 py-1 rounded-full border border-[var(--border-tag)] font-mono whitespace-nowrap">
             {job.period}
           </span>
         </div>
@@ -124,7 +124,7 @@ export default function Experience() {
   const [titleRef, titleInView] = useInView();
 
   return (
-    <section id="experience" className="py-24 bg-[#0c0c13]">
+    <section id="experience" className="py-24 bg-[var(--bg-2)]">
       <div className="max-w-4xl mx-auto px-6">
 
         <div

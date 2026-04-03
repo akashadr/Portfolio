@@ -52,7 +52,7 @@ function AwardCard({ award, delay }) {
         href={award.href}
         target="_blank"
         rel="noopener noreferrer"
-        className="flex items-start gap-4 bg-[#111118] border border-[#1e1e2e] rounded-xl p-4 glow-card group"
+        className="flex items-start gap-4 bg-[var(--bg-card)] border border-[var(--border-card)] rounded-xl p-4 glow-card group"
         style={{
           opacity: inView ? 1 : 0,
           transform: inView ? 'none' : 'translateX(-16px)',
@@ -71,7 +71,7 @@ function AwardCard({ award, delay }) {
     ) : (
       <div
         ref={ref}
-        className="flex items-start gap-4 bg-[#111118] border border-[#1e1e2e] rounded-xl p-4 glow-card"
+        className="flex items-start gap-4 bg-[var(--bg-card)] border border-[var(--border-card)] rounded-xl p-4 glow-card"
         style={{
           opacity: inView ? 1 : 0,
           transform: inView ? 'none' : 'translateX(-16px)',
@@ -93,7 +93,7 @@ export default function Achievements() {
   const [ratingsRef, ratingsInView] = useInView();
 
   return (
-    <section id="achievements" className="py-24 bg-[#0c0c13]">
+    <section id="achievements" className="py-24 bg-[var(--bg-2)]">
       <div className="max-w-6xl mx-auto px-6">
 
         <div
@@ -141,7 +141,7 @@ export default function Achievements() {
               }}
             >
               {RATINGS.map(r => (
-                <div key={r.platform + r.rating} className="flex items-center justify-between bg-[#111118] border border-[#1e1e2e] rounded-xl px-5 py-4 glow-card">
+                <div key={r.platform + r.rating} className="flex items-center justify-between bg-[var(--bg-card)] border border-[var(--border-card)] rounded-xl px-5 py-4 glow-card">
                   <span className="text-slate-300 font-medium">{r.platform}</span>
                   <div className="flex items-center gap-3">
                     {r.handle && (

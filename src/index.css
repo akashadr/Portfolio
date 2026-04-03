@@ -1,5 +1,48 @@
 @import "tailwindcss";
 
+/* ── Theme variables ─────────────────────────────────── */
+:root {
+  --bg-1:          #09090f;
+  --bg-2:          #0c0c13;
+  --bg-card:       #111118;
+  --bg-tag:        #1a1a24;
+  --bg-tag-alt:    #1a1a26;
+  --border-card:   #1e1e2e;
+  --border-tag:    #2e2e3a;
+  --border-tag-alt:#2a2a38;
+  --nav-bg:        rgba(9,9,15,0.90);
+  --nav-mobile-bg: rgba(9,9,15,0.95);
+}
+
+html.light {
+  --bg-1:          #f8fafc;
+  --bg-2:          #f1f5f9;
+  --bg-card:       #ffffff;
+  --bg-tag:        #f1f5f9;
+  --bg-tag-alt:    #eef2f7;
+  --border-card:   #e2e8f0;
+  --border-tag:    #cbd5e1;
+  --border-tag-alt:#d1d5db;
+  --nav-bg:        rgba(248,250,252,0.90);
+  --nav-mobile-bg: rgba(248,250,252,0.95);
+
+  /* Darken purple so it's readable on light backgrounds */
+  --color-purple-300: oklch(49.1% 0.191 311.51);
+  --color-purple-400: oklch(55.8% 0.221 310.03);
+
+  /* Invert Tailwind slate scale so semantic classes flip naturally */
+  --color-slate-50:  oklch(12.9% 0.042 264.695);
+  --color-slate-100: oklch(21.0% 0.034 264.665);
+  --color-slate-200: oklch(27.8% 0.037 256.848);
+  --color-slate-300: oklch(37.2% 0.044 257.287);
+  --color-slate-400: oklch(44.6% 0.043 257.281);
+  --color-slate-500: oklch(55.3% 0.047 257.417);
+  --color-slate-600: oklch(70.4% 0.04  256.788);
+  --color-slate-700: oklch(86.9% 0.022 252.894);
+  --color-slate-800: oklch(93.2% 0.013 255.508);
+  --color-slate-900: oklch(96.8% 0.007 247.896);
+}
+
 @keyframes fadeUp {
   from { opacity: 0; transform: translateY(28px); }
   to   { opacity: 1; transform: translateY(0); }
@@ -69,12 +112,13 @@ html { scroll-behavior: smooth; }
 
 body {
   margin: 0;
-  background-color: #09090f;
+  background-color: var(--bg-1);
+  transition: background-color 0.3s ease, color 0.3s ease;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 }
 
 ::-webkit-scrollbar { width: 5px; }
-::-webkit-scrollbar-track { background: #09090f; }
+::-webkit-scrollbar-track { background: var(--bg-1); }
 ::-webkit-scrollbar-thumb { background: #7c3aed; border-radius: 99px; }
 ::-webkit-scrollbar-thumb:hover { background: #9333ea; }
 

@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <footer className="py-8 bg-[#09090f] border-t border-[#1e1e2e]">
+    <footer className="py-8 bg-[var(--bg-1)] border-t border-[var(--border-card)]">
       <div className="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-3">
         <span className="text-slate-600 text-sm">
           © {new Date().getFullYear()} Akash Jha. Built with React + Tailwind.

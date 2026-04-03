@@ -92,7 +92,7 @@ export default function Contact() {
   const [titleRef, titleInView] = useInView();
 
   return (
-    <section id="contact" className="py-24 bg-[#09090f] relative overflow-hidden">
+    <section id="contact" className="py-24 bg-[var(--bg-1)] relative overflow-hidden">
       <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-96 h-64 bg-purple-700/15 rounded-full blur-3xl pointer-events-none" />
 
       <div className="max-w-4xl mx-auto px-6 relative z-10">

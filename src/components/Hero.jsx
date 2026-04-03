@@ -52,7 +52,7 @@ export default function Hero() {
   const [ref, inView] = useInView(0.05);
 
   return (
-    <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#09090f]">
+    <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[var(--bg-1)]">
 
       {/* Dot grid background */}
       <div

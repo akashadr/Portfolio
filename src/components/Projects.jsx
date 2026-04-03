@@ -42,7 +42,7 @@ function ProjectCard({ project, delay }) {
   return (
     <div
       ref={ref}
-      className="bg-[#111118] border border-[#1e1e2e] rounded-2xl overflow-hidden glow-card"
+      className="bg-[var(--bg-card)] border border-[var(--border-card)] rounded-2xl overflow-hidden glow-card"
       style={{
         opacity: inView ? 1 : 0,
         transform: inView ? 'none' : 'translateY(28px)',
@@ -93,7 +93,7 @@ function ProjectCard({ project, delay }) {
 
         <div className="flex flex-wrap gap-2">
           {project.tech.map(t => (
-            <span key={t} className="text-xs px-2.5 py-1 bg-[#1a1a26] text-slate-400 rounded-lg border border-[#2a2a38] font-mono">
+            <span key={t} className="text-xs px-2.5 py-1 bg-[var(--bg-tag-alt)] text-slate-400 rounded-lg border border-[var(--border-tag-alt)] font-mono">
               {t}
             </span>
           ))}
@@ -107,7 +107,7 @@ export default function Projects() {
   const [titleRef, titleInView] = useInView();
 
   return (
-    <section id="projects" className="py-24 bg-[#09090f]">
+    <section id="projects" className="py-24 bg-[var(--bg-1)]">
       <div className="max-w-6xl mx-auto px-6">
         <div
           ref={titleRef}

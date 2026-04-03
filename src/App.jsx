@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react';
 import './App.css';
 import Navbar       from './components/Navbar';
 import Hero         from './components/Hero';
@@ -11,9 +12,24 @@ import Contact      from './components/Contact';
 import Footer       from './components/Footer';
 
 export default function App() {
+  const [isDark, setIsDark] = useState(() => {
+    const stored = localStorage.getItem('theme');
+    return stored ? stored === 'dark' : true;
+  });
+
+  useEffect(() => {
+    const html = document.documentElement;
+    if (isDark) {
+      html.classList.remove('light');
+    } else {
+      html.classList.add('light');
+    }
+    localStorage.setItem('theme', isDark ? 'dark' : 'light');
+  }, [isDark]);
+
   return (
     <>
-      <Navbar />
+      <Navbar isDark={isDark} toggleTheme={() => setIsDark(d => !d)} />
       <main>
         <Hero />
         <Skills />

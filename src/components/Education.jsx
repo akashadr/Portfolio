@@ -4,11 +4,11 @@ export default function Education() {
   const [ref, inView] = useInView();
 
   return (
-    <section id="education" className="py-16 bg-[#0c0c13]">
+    <section id="education" className="py-16 bg-[var(--bg-2)]">
       <div className="max-w-4xl mx-auto px-6">
         <div
           ref={ref}
-          className="bg-[#111118] border border-[#1e1e2e] rounded-2xl p-8 glow-card flex flex-col sm:flex-row items-start gap-6"
+          className="bg-[var(--bg-card)] border border-[var(--border-card)] rounded-2xl p-8 glow-card flex flex-col sm:flex-row items-start gap-6"
           style={{
             opacity: inView ? 1 : 0,
             transform: inView ? 'none' : 'translateY(24px)',
@@ -26,7 +26,7 @@ export default function Education() {
                 <p className="text-slate-500 text-sm mt-0.5">West Bengal, India</p>
               </div>
               <div className="text-right">
-                <div className="text-slate-400 text-sm font-mono bg-[#1a1a24] px-3 py-1 rounded-full border border-[#2e2e3a]">
+                <div className="text-slate-400 text-sm font-mono bg-[var(--bg-tag)] px-3 py-1 rounded-full border border-[var(--border-tag)]">
                   2019 – 2023
                 </div>
                 <div className="mt-3 text-2xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-400">

@@ -107,7 +107,7 @@ export default function Profiles() {
   const [titleRef, titleInView] = useInView();
 
   return (
-    <section id="profiles" className="py-24 bg-[#09090f]">
+    <section id="profiles" className="py-24 bg-[var(--bg-1)]">
       <div className="max-w-6xl mx-auto px-6">
 
         <div
